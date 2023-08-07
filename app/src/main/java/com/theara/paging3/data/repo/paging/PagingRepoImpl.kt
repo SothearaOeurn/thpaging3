@@ -60,10 +60,10 @@ class PagingRepoImpl @Inject constructor(private var api: Api, private var conte
                             if (responseBody.items.isNotEmpty()) page + 1 else null
                         )
                     } else {
-                        MyPagingState.Error(Exception(context.getString(com.theara.paging3library.R.string.empty_response_network)))
+                        MyPagingState.Error(Exception(context.getString(com.theara.thpaging3lib.R.string.empty_response_network)))
                     }
                 } else {
-                    return MyPagingState.Error(Exception(context.getString(com.theara.paging3library.R.string.data_response_failed)))
+                    return MyPagingState.Error(Exception(context.getString(com.theara.thpaging3lib.R.string.data_response_failed)))
                 }
             }
             // If network call failed or there is cached data available, return the cached data
@@ -76,7 +76,7 @@ class PagingRepoImpl @Inject constructor(private var api: Api, private var conte
             } else {
                 // If there is no cached data and the network call also failed,
                 // return an error to indicate that there is no data available.
-                MyPagingState.Error(Exception(context.getString(com.theara.paging3library.R.string.no_data_available)))
+                MyPagingState.Error(Exception(context.getString(com.theara.thpaging3lib.R.string.no_data_available)))
             }
         } catch (e: Exception) {
             return MyPagingState.Error(e)

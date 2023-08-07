@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.theara.paging3.data.response.PagingRes
 import com.theara.paging3.databinding.ItemPagingBinding
-import com.theara.paging3library.adapter.BasePagingAdapter
+import com.theara.thpaging3lib.adapter.BasePagingAdapter
 import javax.inject.Inject
 
 class PagingAdapter @Inject constructor(): BasePagingAdapter<PagingRes, PagingAdapter.PageViewHolder>(DiffCallback()) {

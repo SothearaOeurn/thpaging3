@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="callBack"
+            type="com.theara.thpaging3lib.utils.RetryCallback" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isError"
+            type="Boolean" />
+
+        <variable
+            name="errorMessage"
+            type="String" />
+
+        <variable
+            name="noInternet"
+            type="Boolean" />
+
+        <variable
+            name="noData"
+            type="Boolean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            visibleGone="@{isLoading}" />
+
+        <ImageView
+            android:id="@+id/ivInternet"
+            visibleGone="@{noInternet}"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="detail"
+            android:src="@mipmap/img_no_internet"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/ivNoData"
+            visibleGone="@{noData}"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="detail"
+            android:src="@mipmap/img_no_data"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:text="@{(errorMessage == null) ? @string/error_occur : errorMessage, default = @string/error_occur}"
+            visibleGone="@{isError || noData}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> callBack.retry()}"
+            android:text="@string/retry"
+            android:textColor="@android:color/white"
+            visibleGone="@{isError}" />
+    </LinearLayout>
+</layout>

@@ -9,8 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import com.theara.paging3.R
 import com.theara.paging3.data.room.AppDatabase
 import com.theara.paging3.databinding.ActivityMainBinding
-import com.theara.paging3library.adapter.PagingLoadingStateAdapter
-import com.theara.paging3library.utils.NetworkUtils
+import com.theara.thpaging3lib.adapter.PagingLoadingStateAdapter
+import com.theara.thpaging3lib.utils.NetworkUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                 binding.noInternet = true
                 binding.isError = true
                 binding.errorMessage =
-                    resources.getString(com.theara.paging3library.R.string.no_internet)
+                    resources.getString(com.theara.thpaging3lib.R.string.no_internet)
             },
             onErrorAction = { errorMessage ->
                 binding.errorMessage = errorMessage

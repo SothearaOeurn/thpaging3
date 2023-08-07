@@ -7,7 +7,7 @@ import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.theara.paging3.data.resclient.Api
 import com.theara.paging3.utils.NetworkConnectionInterceptor
-import com.theara.paging3library.utils.NetworkUtils
+import com.theara.thpaging3lib.utils.NetworkUtils
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

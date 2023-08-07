@@ -6,7 +6,7 @@
 
         <variable
             name="callBack"
-            type="com.theara.paging3library.utils.RetryCallback" />
+            type="com.theara.thpaging3lib.utils.RetryCallback" />
 
         <variable
             name="isLoading"
