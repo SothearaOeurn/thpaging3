@@ -55,7 +55,7 @@ Add the dependency
 
 ```gradle
 dependencies {
-    implementation 'com.github.SothearaOeurn:thpaging3:-SNAPSHOT'
+    implementation 'com.github.SothearaOeurn:thpaging3:1.0.0'
     // Add other dependencies as needed
 }
 ```
