@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Paging3</string>
+    <string name="retry">Retry</string>
+    <string name="error_occur" translatable="false">Error occur</string>
+    <string name="pls_check_network">Please check network</string>
+
+    <string name="language">Language: %s</string>
+</resources>

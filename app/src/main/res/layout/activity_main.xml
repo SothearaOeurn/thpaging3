@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="callBack"
+            type="com.theara.paging3library.utils.RetryCallback" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isError"
+            type="Boolean" />
+
+        <variable
+            name="errorMessage"
+            type="String" />
+
+        <variable
+            name="noInternet"
+            type="Boolean" />
+
+        <variable
+            name="noData"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.paging.PagingFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDisplay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingVertical="20dp"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
+
+        <include
+            layout="@layout/state_paging"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:callBack="@{callBack}"
+            app:errorMessage="@{errorMessage}"
+            app:isError="@{isError}"
+            app:isLoading="@{isLoading}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:noData="@{noData}"
+            app:noInternet="@{noInternet}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
