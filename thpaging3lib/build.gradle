@@ -66,9 +66,9 @@ afterEvaluate {
             aar(MavenPublication){
                 from components.release
 
-                groupId ="com.github.SothearaOeurn"
+                groupId ="com.theara"
                 artifactId='thpaging3lib'
-                version ='1.0.2'
+                version ='1.0.3'
             }
         }
         repositories {
